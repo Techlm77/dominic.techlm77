@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="nav">
+        <a href="../index.html">Back</a>
+        <br>
+        <a href="../build/index.html">Build</a>
+        <br>
+        <a href="../database/index.html">Database</a>
+        <br>
+        <a href="../game/index.html" class="active">Game</a>
+        <br>
+        <a href="../spreadsheet/index.html">Spreadsheet</a>
+    </div>
+
+    <!-- Game section -->
+    <div class="wrapper" id="intro">
+        <div class="inner">
+            <div id="div1" class="fade-show">
+                <p>
+                    design a mobile app/game for a commuter traveling to work/college. I decided the game should be
+                    short and
+                    simple with easy controls for a mobile/tablet device enabling it to be played whilst commuting.
+                </p>
+                <br>
+                <p>
+                    The levels are short with a twist as each level get noticeably harder. After receiving feedback I
+                    removed
+                    the grass texture (.png) to give the game a minimal aesthectic appearance. Initially I included
+                    birds swooping down for the player to kill/attack however this proved difficult to do, bearing
+                    in mind the player hold the device while he/she is travelling.
+                </p>
+                <br>
+                <button class="popup-btn">Click to run unity</button>
+                <a href="../game/Unity/index.html" target="_blank"></a>
+                <br>
+                <img src="flow-chart.png">
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        /* Add the following code in your JS file */
+        const popupButtons = document.querySelectorAll('.popup-btn');
+
+        popupButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectURL = button.nextElementSibling.getAttribute('href');
+
+                // Create the popup container
+                const popupContainer = document.createElement('div');
+                popupContainer.classList.add('popup-container');
+
+                // Create the iframe and set its attributes
+                const iframe = document.createElement('iframe');
+                iframe.src = projectURL;
+
+                iframe.style.width = '960px';
+                iframe.style.height = '642px';
+
+                // Append the iframe to the popup container
+                popupContainer.appendChild(iframe);
+
+                // Create the close button
+                const closeButton = document.createElement('button');
+                closeButton.innerHTML = 'Close';
+                closeButton.addEventListener('click', () => {
+                    document.body.removeChild(popupContainer);
+                });
+
+                // Append the close button to the popup container
+                popupContainer.appendChild(closeButton);
+
+                // Open the popup
+                document.body.appendChild(popupContainer);
+            });
+        });
+
+    </script>
+</body>
+
+</html>

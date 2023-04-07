@@ -1,0 +1,95 @@
+/* CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #4CAF50;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  .input-container {
+    margin-top: 10px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #1c1c1c;
+  }
+  
+  .primary-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .primary-button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .section-header {
+    margin-top: 20px;
+  }
+  
+  .section-content {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    color: #ffffff;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      max-width: 100%;
+    }
+  }

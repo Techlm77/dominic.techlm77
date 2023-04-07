@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Windows Taskbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="desktop">
+        <div class="taskbar">
+            <div id="search-div"
+                style="position: fixed; color: white; background-color: rgb(51, 51, 51); border-radius: 5px; padding: 20px; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px; bottom: 70px; left: 15px; display: none; width: 340px; height: 500px; overflow-y: scroll;">
+                <ul id="searchList" style="list-style-type: none;">
+                    <li>
+                        <p style="cursor: pointer;"
+                            onclick="openWindow('Asymmetric Key', '../encryption/index.html'); searchDiv.style.display = 'none';">Asymmetric</p>
+                    </li>
+                    <li>
+                        <p style="cursor: pointer;"
+                            onclick="openWindow('File Explorer', '../explorer/index.html'); searchDiv.style.display = 'none';">Explorer</p>
+                    </li>
+                    <li>
+                        <p style="cursor: pointer;"
+                            onclick="openWindow('WebSocket Chat', '../public/index.html'); searchDiv.style.display = 'none';">WebSocket</p>
+                    </li>
+                    <li>
+                        <p style="cursor: pointer;"
+                            onclick="openWindow('Terminal', '../terminal/index.html'); searchDiv.style.display = 'none';">Terminal</p>
+                    </li>
+                    <li>
+                        <p style="cursor: pointer;"
+                            onclick="openWindow('Upload', '../upload/index.php'); searchDiv.style.display = 'none';">Upload</p>
+                    </li>
+                    <li>
+                        <p style="cursor: pointer;"
+                            onclick="openWindow('Terry Davis Varoom', 'https://techlm77.com/3D-Objects/Car/3D-Car(controls).html'); searchDiv.style.display = 'none';">Varoom</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="search-box" style="position: relative;">
+                <input type="text" placeholder="Search..." onkeypress="if(event.keyCode == 13) capture();"
+                    list="data-list" id="search-box" autocomplete="off" onkeyup="lettersOnly(this)"
+                    onkeydown="lettersOnly(this)" onpaste="return false;" onclick="showSearch()">
+                <i class="fa fa-search" style="position: absolute; right: 10px; top: 10px;"></i>
+            </div>
+
+            <div class="task-icons"></div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

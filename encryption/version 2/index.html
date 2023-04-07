@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encryption and Decryption Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    <main>
+      <div class="container">
+        <h1>Encryption and Decryption Example</h1>
+        <section>
+          <h2 class="section-header">Public Key</h2>
+          <div id="public-key-display" class="section-content"></div>
+          <h2 class="section-header">Private Key</h2>
+          <div id="private-key-display" class="section-content"></div>
+        </section>
+        <section>
+          <h2 class="section-header">Message</h2>
+          <div class="input-container">
+            <input class="input-field" type="text" id="message-input" />
+          </div>
+        </section>
+        <section>
+          <div class="button-container">
+            <button class="primary-button" id="encrypt-button">Encrypt</button>
+          </div>
+          <hr />
+          <div class="button-container">
+            <button class="primary-button" id="decrypt-button">Decrypt</button>
+          </div>
+        </section>
+        <section>
+          <h2 class="section-header">Result</h2>
+          <div id="result-display" class="section-content"></div>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

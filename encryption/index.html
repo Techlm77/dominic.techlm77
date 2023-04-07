@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File List</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0 auto;
+            background-color: #202020;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 20px;
+            margin: 0 20px 50px 20px;
+        }
+
+        li {
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #6c6c6c;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            color: #fff;
+        }
+
+        li:hover {
+            background-color: #d4e4f0;
+            color: #111;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px 20px;
+            background-color: #4c803d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2c4368;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>There are two versions, pick which one you want to use</h1>
+        <button id="backButton">Go Back</button>
+        <ul id="fileList">
+        </ul>
+    </div>
+
+    <script>
+        const fileList = {
+            '/encryption/version 1/': ['index.html', 'script.js', 'style.css'],
+            '/encryption/version 2/': ['index.html', 'script.js', 'style.css'],
+        };
+
+        const fileListElement = document.getElementById('fileList');
+        const backButton = document.getElementById('backButton');
+
+        for (const [directory, filenames] of Object.entries(fileList)) {
+            const listItem = document.createElement('li');
+            listItem.textContent = directory;
+            listItem.addEventListener('click', () => {
+                fileListElement.innerHTML = '';
+                for (const filename of filenames) {
+                    const fileListItem = document.createElement('li');
+                    const fileLink = document.createElement('a');
+                    fileLink.href = `${directory}${filename}`;
+                    fileLink.textContent = filename;
+                    fileListItem.appendChild(fileLink);
+                    fileListElement.appendChild(fileListItem);
+                }
+            });
+            fileListElement.appendChild(listItem);
+        }
+
+        backButton.addEventListener('click', () => {
+            window.location.href = '../encryption/';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+#file-explorer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f8f9fa;
+    color: #2c2c2c;
+}
+
+#file-explorer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c2c2c;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+#file-explorer-header span {
+    margin-right: 20px;
+}
+
+#search-input {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e3e3e3;
+    width: 300px;
+    color: #2c2c2c;
+}
+
+#search-input::placeholder {
+    color: #888;
+}
+
+#file-explorer-content {
+    display: flex;
+    flex: 1;
+    background-color: #f8f9fa;
+    color: #2c2c2c;
+}
+
+#file-explorer-sidebar {
+    flex: 0 0 300px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+#file-explorer-main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.file-explorer-folder {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #e3e3e3;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.file-explorer-folder:last-child {
+    border-bottom: none;
+}
+
+.file-explorer-folder:hover {
+    background-color: #ddd;
+}
+
+.file-explorer-folder .file-icon {
+    background-image: url(folder.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.file-explorer-file {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #e3e3e3;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.file-explorer-file:last-child {
+    border-bottom: none;
+}
+
+.file-explorer-file:hover {
+    background-color: #ddd;
+}
+
+.file-explorer-file .file-icon {
+    background-image: url(file.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #file-explorer {
+        flex-direction: column;
+    }
+
+    #file-explorer-sidebar {
+        flex: 0 0 100%;
+    }
+
+    #search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

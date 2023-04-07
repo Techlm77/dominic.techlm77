@@ -1,0 +1,67 @@
+body {
+    background-color: #202020;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.output {
+    color: #dfdbdb;
+    padding: 5px;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.prompt {
+    display: inline-block;
+    color: #34ff34;
+    margin-right: 10px;
+}
+
+.command-line {
+    display: inline-block;
+    position: relative;
+    color: #dfdbdb;
+}
+
+.command-line::after {
+    content: attr(data-placeholder);
+    pointer-events: none;
+    opacity: 0.6;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    font: 16px/1.2 'Courier New', Courier, monospace;
+}
+
+.command-line input {
+    background-color: transparent;
+    border: none;
+    color: #dfdbdb;
+    outline: none;
+    width: 90%;
+    font: 16px/1.2 'Courier New', Courier, monospace;
+}
+
+/* Add focus style to the command line */
+.command-line input:focus {
+    border-bottom: 1px solid #34ff34;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #34ff34;
+}
