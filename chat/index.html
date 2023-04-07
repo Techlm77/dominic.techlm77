@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Websocket Chat</h1>
+    </header>
+    <main>
+        <div id="chat-container">
+            <div id="chat-messages" class="chat-messages"></div>
+            <form id="chat-form">
+                <div class="input-group">
+                    <input type="text" name="message" id="message-input" placeholder="Enter a message..."
+                        maxlength="500" autocomplete="off">
+                    <button type="submit" class="button-primary">Send</button>
+                </div>
+                <div class="button-group">
+                    <button id="username-button" class="button-secondary">Username</button>
+                    <button id="disconnect-button" class="button-secondary">Disconnect</button>
+                    <button id="notification-button" class="button-secondary" onclick="isNotificationEnabled()">Check
+                        for Notification</button>
+                    <button id="help-button" class="button-secondary">Help</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 WebSocket Chat</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
