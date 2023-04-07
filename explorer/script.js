@@ -34,9 +34,9 @@ function createFileListItem(file, folder) {
 
   // Add event listener to open file in a new tab
   fileListItem.addEventListener('click', () => {
-    let filePath = `https://192.168.1.107/${folder.toLowerCase()}/${file}`;
+    let filePath = `https://${window.location.hostname}/${folder.toLowerCase()}/${file}`;
     if (folder === 'Home') {
-      filePath = `https://192.168.1.107/${file}`;
+      filePath = `https://${window.location.hostname}/${file}`;
     }
     window.open(filePath);
   });
