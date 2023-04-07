@@ -112,7 +112,7 @@ function capture() {
     var search = document.getElementById("search-box").value.toLowerCase();
     switch (search) {
         case "websocket":
-            openWindow("WebSocket Chat", "../public/index.html");
+            openWindow("WebSocket Chat", "../chat/index.html");
             break;
         case "upload":
             openWindow("Upload", "index.php");
